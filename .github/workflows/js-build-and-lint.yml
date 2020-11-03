@@ -68,6 +68,8 @@ jobs:
 
       - name: storybook
         if: steps.changes.outputs.frontend == 'true'
+        env:
+          STORYBOOK_BUILD=1
         run: |
           yarn storybook-build
 
